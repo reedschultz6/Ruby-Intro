@@ -49,16 +49,17 @@ complete_profile = { "name" => "Ben Block",
                                     { "status" => "Eating more tacos", "posted" => "9:00am" }] }
 
 # And we might have to jump through a few hoops to get the data we're looking for:
-complete_profile["timeline"][0]["status"] # Eating tacos
+
+puts complete_profile["timeline"][0]["status"] # Eating tacos
+
 
 # p.s. Hashes can be written two different ways
 
 # Method #1: The way we've already learned
-my_profile = { "name" => "Brian", "location" => "Chicago" }
-puts my_profile["name"]
+# my_profile = { "name" => "Brian", "location" => "Chicago" }
+# puts my_profile["name"]
 
 # Method #2: Using colons.
 # Written this way, the key is accessed by what's known as a "Symbol", i.e. a word with a colon preceding it.
 # You'll notice that, internally, Ruby stores hashes this way.
-my_profile = { :name => "Brian", :location => "Chicago" }
-puts my_profile[:name]
+
