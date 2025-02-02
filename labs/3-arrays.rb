@@ -24,11 +24,12 @@ combined_list = my_shopping_list + my_friends_shopping_list
 purchase_list = combined_list.sort
 
 index = 0
-while index < purchase_list.size
-  purchase_list[index] = "buy #{purchase_list[index]}"
-  index += 1
+loop do
+if index == purchase_list.size
+break 
 end
 
-purchase_list.each do |item|
-    puts item
-  end
+item = purchase_list[index] 
+puts "buy #{item}"
+index = index + 1
+end
